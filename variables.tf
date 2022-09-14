@@ -2,58 +2,67 @@
 ########################################
 # Optional Variables
 ########################################
+variable "is_bcdr" {
+  default = null
+  type    = bool
+}
+variable "assign_ipv6_address_on_creation" {
+  default = null
+  type    = bool
+}
+variable "availability_zone" {
+  default = null
+  type    = string
+}
+variable "availability_zone_id" {
+  default = null
+  type    = string
+}
 variable "cidr_block" {
   default = null
   type    = string
 }
-variable "instance_tenancy" {
+variable "customer_owned_ipv4_pool" {
   default = null
   type    = string
 }
-variable "ipv4_ipam_pool_id" {
+variable "enable_dns64" {
   default = null
-  type    = string
+  type    = bool
 }
-variable "ipv4_netmask_length" {
+variable "enable_resource_name_dns_aaaa_record_on_launch" {
   default = null
-  type    = number
+  type    = bool
+}
+variable "enable_resource_name_dns_a_record_on_launch" {
+  default = null
+  type    = bool
 }
 variable "ipv6_cidr_block" {
   default = null
   type    = string
 }
-variable "ipv6_ipam_pool_id" {
+variable "ipv6_native" {
+  default = null
+  type    = bool
+}
+variable "map_customer_owned_ip_on_launch" {
+  default = null
+  type    = bool
+}
+variable "map_public_ip_on_launch" {
+  default = null
+  type    = bool
+}
+variable "outpost_arn" {
   default = null
   type    = string
 }
-variable "ipv6_netmask_length" {
+variable "private_dns_hostname_type_on_launch" {
   default = null
-  type    = number
+  type    = string
 }
-variable "enable_dns_support" {
-  default = null
-  type    = bool
-}
-variable "enable_dns_hostnames" {
-  default = null
-  type    = bool
-}
-variable "enable_classiclink" {
-  default = null
-  type    = bool
-}
-variable "enable_classiclink_dns_support" {
-  default = null
-  type    = bool
-}
-variable "assign_generated_ipv6_cidr_block" {
-  default = null
-  type    = bool
-}
-variable "is_bcdr" {
-  default = false
-  type    = bool
-}
+
 variable "tags" {
   default = null
   type    = any
